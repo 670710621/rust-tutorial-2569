@@ -38,3 +38,15 @@
 ---
 
 *โครงสร้างเอกสารฉบับเต็ม (Key Concepts, Runnable Code Examples, Common Mistakes, Exercises, PPL Perspective, Rust vs Other Language, References, AI Usage Declaration, GitHub Contribution, Final Checklist) ให้ทำต่อจากจุดนี้ตาม Template หลักของวิชา (`rust_tutorial_template.md`) ที่แนบมากับใบมอบหมายงาน*
+
+
+---
+
+## 3. PPL
+
+9.1 Syntax
+ภาษา Rust ใช้แนวคิดการคืนค่าผลลัพธ์ (Return Values) ในการจัดการข้อผิดพลาดผ่านชนิดข้อมูล Option และ Result โดยไม่มีการใช้โครงสร้างไวยากรณ์เฉพาะสำหรับการโยน Exception (เช่น คีย์เวิร์ด try, catch, throw) แต่ประยุกต์ใช้โครงสร้างไวยากรณ์พื้นฐานร่วมกับกลไก Pattern Matching และ ? operator ดังนี้
+•	การนิยามโครงสร้างข้อมูลด้วย Enum และ Generic Parameters (<T, E>) โดยใช้ไวยากรณ์ Enum ร่วมกับ Generic Parameters (<T,  E>) เพื่อสร้างประเภทข้อมูลที่ยืดหยุ่น รองรับข้อมูลชนิดใดก็ได้ สำหรับใช้แทนกรณีการทำงานที่สำเร็จและกรณีที่เกิดข้อผิดพลาด
+•	การควบคุมทิศทางโปรแกรมด้วย Pattern Matching โดยใช้ไวยากรณ์ match และ if let เป็นโครงสร้างหลักในการควบคุมทิศทางโปรแกรม ตรวจสอบกรณีที่เกิดข้อผิดพลาด และแกะค่าข้อมูลออกจาก Option และ Result
+•	การจัดการและส่งต่อข้อผิดพลาดด้วย ? Operator โดยใช้เครื่องหมาย ? เพื่อลดรูปโค้ดการตรวจสอบ Result หรือ Option แทนการเขียนคำสั่ง match ที่ยาว โดยทำงานแบบ Short-circuiting ซึ่งจะส่งคืนข้อผิดพลาดกลับไปยังฟังก์ชันที่เรียกใช้งานทันทีโดยอัตโนมัติ
+
